@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tecnología Educativa - UTMACH</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f6ff;
+      color: #333;
+    }
+    header {
+      background: #003366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #0055a5;
+    }
+    nav a {
+      padding: 14px 20px;
+      display: block;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background: #0073e6;
+    }
+    section {
+      padding: 40px;
+      text-align: center;
+    }
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+    .reloj {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tecnología Educativa en la Educación Superior</h1>
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#autor">Sobre Evelyn</a>
+    <a href="#contemporanea">Sociedad Contemporánea</a>
+    <a href="#informacion">Sociedad de la Información</a>
+    <a href="#conocimiento">Sociedad del Conocimiento</a>
+  </nav>
+
+  <section id="inicio">
+    <h2>Bienvenidos</h2>
+    <p>La tecnología educativa en la educación superior permite nuevas formas de enseñanza, aprendizaje y evaluación. Con recursos digitales, plataformas LMS, inteligencia artificial y conectividad global, se transforma la experiencia educativa, volviéndola más accesible, colaborativa e innovadora.</p>
+  </section>
+
+  <section id="autor">
+    <h2>Sobre Evelyn Del Cisne Córdova Cedillo</h2>
+    <p>Estudiante de la carrera de Pedagogía en Informática en la Universidad Técnica de Machala (UTMACH), apasionada por la innovación educativa, la accesibilidad y el uso de herramientas tecnológicas en el aula.</p>
+  </section>
+
+  <section id="contemporanea">
+    <h2>Sociedad Contemporánea</h2>
+    <p>La sociedad contemporánea se caracteriza por avances tecnológicos, cambios culturales rápidos y nuevas formas de comunicación. En la educación, esto implica adaptarse constantemente a nuevas herramientas y necesidades sociales.</p>
+  </section>
+
+  <section id="informacion">
+    <h2>Sociedad de la Información</h2>
+    <p>Vivimos en una era donde el acceso, uso y manejo de la información es vital. La educación superior debe preparar a los estudiantes para filtrar, analizar y aplicar información de manera crítica.</p>
+  </section>
+
+  <section id="conocimiento">
+    <h2>Sociedad del Conocimiento</h2>
+    <p>En esta sociedad, el conocimiento es el recurso más valioso. La educación superior tiene el reto de formar ciudadanos capaces de generar y compartir conocimiento de forma ética y creativa.</p>
+  </section>
+
+  <footer>
+    <p>UTMACH - Tecnología Educativa | <span class="reloj" id="reloj"></span></p>
+  </footer>
+
+  <script>
+    function actualizarReloj() {
+      const ahora = new Date();
+      const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      const fecha = ahora.toLocaleDateString('es-ES', opciones);
+      const hora = ahora.toLocaleTimeString('es-ES');
+      document.getElementById('reloj').innerText = `${fecha} - ${hora}`;
+    }
+    setInterval(actualizarReloj, 1000);
+    actualizarReloj();
+  </script>
+</body>
+</html>
